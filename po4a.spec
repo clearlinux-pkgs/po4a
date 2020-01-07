@@ -4,16 +4,17 @@
 #
 Name     : po4a
 Version  : 0.57
-Release  : 2
+Release  : 3
 URL      : https://github.com/mquinson/po4a/archive/v0.57/po4a-0.57.tar.gz
 Source0  : https://github.com/mquinson/po4a/archive/v0.57/po4a-0.57.tar.gz
-Summary  : Tools for helping translation of documentation
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: po4a-bin = %{version}-%{release}
 Requires: po4a-license = %{version}-%{release}
 Requires: po4a-locales = %{version}-%{release}
 Requires: po4a-man = %{version}-%{release}
+Requires: po4a-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : docbook-xml
 BuildRequires : libxslt
@@ -45,7 +46,6 @@ Group: Development
 Requires: po4a-bin = %{version}-%{release}
 Provides: po4a-devel = %{version}-%{release}
 Requires: po4a = %{version}-%{release}
-Requires: po4a = %{version}-%{release}
 
 %description dev
 dev components for the po4a package.
@@ -75,8 +75,18 @@ Group: Default
 man components for the po4a package.
 
 
+%package perl
+Summary: perl components for the po4a package.
+Group: Default
+Requires: po4a = %{version}-%{release}
+
+%description perl
+perl components for the po4a package.
+
+
 %prep
 %setup -q -n po4a-0.57
+cd %{_builddir}/po4a-0.57
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -108,32 +118,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/AsciiDoc.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/BibTeX.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Chooser.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Common.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Dia.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Docbook.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Guide.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Halibut.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/InProgress/Debconf.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/InProgress/NewsDebian.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Ini.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/KernelHelp.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/LaTeX.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Man.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Po.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Pod.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/RubyDoc.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Sgml.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/TeX.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Texinfo.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Text.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/TransTractor.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Wml.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Xhtml.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Xml.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Locale/Po4a/Yaml.pm
 
 %files bin
 %defattr(-,root,root,-)
@@ -477,6 +461,35 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/uk/man3/Locale::Po4a::Xml.3pm.gz
 /usr/share/man/uk/man7/po4a.7.gz
 /usr/share/man/zh_CHS/man1/po4aman-display-po.1.gz
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/AsciiDoc.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/BibTeX.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Chooser.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Common.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Dia.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Docbook.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Guide.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Halibut.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/InProgress/Debconf.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/InProgress/NewsDebian.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Ini.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/KernelHelp.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/LaTeX.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Man.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Po.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Pod.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/RubyDoc.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Sgml.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/TeX.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Texinfo.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Text.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/TransTractor.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Wml.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Xhtml.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Xml.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Locale/Po4a/Yaml.pm
 
 %files locales -f po4a.lang
 %defattr(-,root,root,-)
