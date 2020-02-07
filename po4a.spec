@@ -4,7 +4,7 @@
 #
 Name     : po4a
 Version  : 0.57
-Release  : 3
+Release  : 4
 URL      : https://github.com/mquinson/po4a/archive/v0.57/po4a-0.57.tar.gz
 Source0  : https://github.com/mquinson/po4a/archive/v0.57/po4a-0.57.tar.gz
 Summary  : No detailed summary available
@@ -15,6 +15,7 @@ Requires: po4a-license = %{version}-%{release}
 Requires: po4a-locales = %{version}-%{release}
 Requires: po4a-man = %{version}-%{release}
 Requires: po4a-perl = %{version}-%{release}
+Requires: perl(SGMLS)
 BuildRequires : buildreq-cpan
 BuildRequires : docbook-xml
 BuildRequires : libxslt
