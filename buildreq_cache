@@ -2,4 +2,3 @@
 docbook-xml
 perl(SGMLS)
 perl(Unicode::GCString)
-util-linux
