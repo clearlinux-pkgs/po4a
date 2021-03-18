@@ -5,3 +5,4 @@ perl(Locale::gettext)
 libxslt
 perl-Term-ReadKey
 perl(YAML::Tiny)
+perl(Pod::Parser)

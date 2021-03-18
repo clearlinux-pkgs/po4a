@@ -4,7 +4,7 @@
 #
 Name     : po4a
 Version  : 0.58.1
-Release  : 9
+Release  : 10
 URL      : https://github.com/mquinson/po4a/archive/v0.58.1/po4a-0.58.1.tar.gz
 Source0  : https://github.com/mquinson/po4a/archive/v0.58.1/po4a-0.58.1.tar.gz
 Summary  : No detailed summary available
@@ -15,12 +15,14 @@ Requires: po4a-license = %{version}-%{release}
 Requires: po4a-locales = %{version}-%{release}
 Requires: po4a-man = %{version}-%{release}
 Requires: po4a-perl = %{version}-%{release}
+Requires: perl(Pod::Parser)
 Requires: perl(SGMLS)
 Requires: perl(YAML::Tiny)
 BuildRequires : buildreq-cpan
 BuildRequires : docbook-xml
 BuildRequires : libxslt
 BuildRequires : perl(Locale::gettext)
+BuildRequires : perl(Pod::Parser)
 BuildRequires : perl(SGMLS)
 BuildRequires : perl(Text::WrapI18N)
 BuildRequires : perl(Unicode::GCString)
