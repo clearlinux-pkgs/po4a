@@ -4,7 +4,7 @@
 #
 Name     : po4a
 Version  : 0.58.1
-Release  : 10
+Release  : 11
 URL      : https://github.com/mquinson/po4a/archive/v0.58.1/po4a-0.58.1.tar.gz
 Source0  : https://github.com/mquinson/po4a/archive/v0.58.1/po4a-0.58.1.tar.gz
 Summary  : No detailed summary available
@@ -453,32 +453,32 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/AsciiDoc.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/BibTeX.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Chooser.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Common.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Dia.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Docbook.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Guide.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Halibut.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/InProgress/Debconf.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/InProgress/NewsDebian.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Ini.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/KernelHelp.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/LaTeX.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Man.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Po.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Pod.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/RubyDoc.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Sgml.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/TeX.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Texinfo.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Text.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/TransTractor.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Wml.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Xhtml.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Xml.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Locale/Po4a/Yaml.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/AsciiDoc.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/BibTeX.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Chooser.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Common.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Dia.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Docbook.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Guide.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Halibut.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/InProgress/Debconf.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/InProgress/NewsDebian.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Ini.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/KernelHelp.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/LaTeX.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Man.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Po.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Pod.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/RubyDoc.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Sgml.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/TeX.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Texinfo.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Text.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/TransTractor.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Wml.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Xhtml.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Xml.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Locale/Po4a/Yaml.pm
 
 %files locales -f po4a.lang
 %defattr(-,root,root,-)
