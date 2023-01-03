@@ -2,6 +2,65 @@ This file presents the major changes of each version, focusing on
 user-visible changes while the day to day changes are in the git logs.
 
 =======================================================================
+        ___   __   ___
+__   __/ _ \ / /_ / _ \
+\ \ / / | | | '_ \ (_) |          Happy New Year release.
+ \ V /| |_| | (_) \__, |
+  \_/  \___(_)___/  /_/           (Released on 2023/01/01)
+
+Markdown:
+ * Parts of a fenced divs are now translated separately (GitHub's #381)
+
+YAML and Yaml Front Matter:
+ * Use the implementation of YFM to parse YAML files too.
+   - This reduces the code dupplication, and brings the nice features over:
+     Numbers and arrays are not quoted anymore in Yaml files, as it should be.
+   - This adds the yfm_paths option to Markdown and Asciidoc YFM,
+     fixing GitHub's #392 along the way.
+   - Please note that '-o keys' is now case-sensitive in Yaml documents.
+ * Do not translate nor quote booleans, so that they are not treated as string.
+   Thanks Gissmo for GitHub's PR #393, even if I had to rework it quite a bit.
+
+XML:
+ * Correctly handle placeholders of empty elements (GitHub's #389)
+ * Translate attributes within attribute-folded inline and placeholder (GH #391)
+   alt attribute of <img> can be properly handled with:
+   -o 'attributes=<image>alt' -o 'inline=<image>' -o foldattributes
+ * Thanks k-yaegashi for the pull request fixing both issues
+
+Project organization:
+ * Do not leak the generation date in our manpages (GitHub's #387)
+   Thanks Arnout Engelen for the pull request.
+
+Translations:
+ * New translation: Georgian, thanks Temuri Doghonadze.
+ * Updated: Dutch, thanks Frans Spiesschaert.
+ * Updated: French, thanks Jérémie Tarot & Brandelune.
+ * Updated: Italian, thanks Marco Ciampa.
+ * Updated: Japanese, thanks gemmaro.
+ * Updated: Portuguese, thanks Hugo Carvalho.
+ * Updated: Portuguese (Brazil), thanks Rafael Fontenelle.
+ * Updated: Ukrainian, thanks Yuri Chornoivan (українська).
+
+Status of the binary translation:
+ * 100%: fr, it, nl, pt_BR, uk.
+ * >95%: eo (96%), nb (96%), pt (99%), sr_Cyrl (99%).
+ * >90%: de (94%), es (94%), hr (94%), hu (92%), ru (93%), zh_CN (94%), zh_Hant (94%).
+ * >70%: id (77%), sv (72%).
+ * >50%: cs (57%), da (62%), et (67%), eu (56%), ja (63%), pl (62%), sl (56%), vi (67%).
+ * >33%: ca (45%).
+ * Starting: ace (2%), af (7%), ar (14%), ka (16%), kn (7%), ko (18%), zh_HK (3%).
+
+Status of the documentation translation:
+ * 100%: it, uk.
+ * >95%: de (98%), fr (99%), ja (96%), nl (99%), sr_Cyrl (98%).
+ * >90%: pt (93%), pt_BR (94%), zh_CHS (94%), zh_Hant (94%).
+ * >80%: es (83%).
+ * >50%: pl (66%), ru (64%).
+ * >33%: ca (43%).
+ * Starting: eo (2%), hr (0%), hu (0%), nb (4%).
+
+=======================================================================
         ___   __    ___
 __   __/ _ \ / /_  ( _ )
 \ \ / / | | | '_ \ / _ \          High Hopes release.
@@ -10,7 +69,7 @@ __   __/ _ \ / /_  ( _ )
 
 
  This release dedication is here to remind you that Hope is always important.
- Plus, the song of that name by Pink Floyd also desserves a dedication.
+ Plus, the song of that name by Pink Floyd also deserves a dedication.
 
 Project organization:
  * Add a deprecation warning to po4a-translate and po4a-updatepo stating
@@ -58,7 +117,6 @@ Translations:
  * Updated: Ukrainian, thanks Yuri Chornoivan (українська) & Artem.
 
 Status of the binary translation:
-
  * 100%: de, pt, sr_Cyrl, uk.
  * >95%: eo (97%), es (95%), fr (97%), hr (95%), it (97%), nb (97%), 
          nl (95%), pt_BR (97%), zh_CN (95%), zh_Hant (95%).
@@ -70,7 +128,6 @@ Status of the binary translation:
  * Starting: ace (2%), af (7%), ar (14%), kn (7%), ko (18%), zh_HK (3%).
 
 Status of the documentation translation:
-
  * 100%: it, uk.
  * >95%: de (99%), fr (95%), pt_BR (95%), sr_Cyrl (99%).
  * >90%: nl (94%), pt (94%), zh_CHS (94%), zh_Hant (94%).
