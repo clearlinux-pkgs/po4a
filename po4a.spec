@@ -4,7 +4,7 @@
 #
 Name     : po4a
 Version  : 0.69
-Release  : 14
+Release  : 15
 URL      : https://github.com/mquinson/po4a/archive/v0.69/po4a-0.69.tar.gz
 Source0  : https://github.com/mquinson/po4a/archive/v0.69/po4a-0.69.tar.gz
 Summary  : No detailed summary available
