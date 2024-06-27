@@ -1,4 +1,5 @@
-0.69
+0.73
 docbook-xml
+libxml2-dev
 perl(SGMLS)
 perl(Unicode::GCString)
