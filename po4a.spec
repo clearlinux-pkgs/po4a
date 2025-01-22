@@ -7,7 +7,7 @@
 #
 Name     : po4a
 Version  : 0.73
-Release  : 20
+Release  : 21
 URL      : https://github.com/mquinson/po4a/archive/v0.73/po4a-0.73.tar.gz
 Source0  : https://github.com/mquinson/po4a/archive/v0.73/po4a-0.73.tar.gz
 Summary  : No detailed summary available
